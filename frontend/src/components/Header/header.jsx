@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Search from "../Search/Search";
 
 export default function Header() {
   return (
@@ -36,7 +37,19 @@ export default function Header() {
         </div>
       </div>
 
-      <div></div>
+      <div className="header">
+        <div className="container flex items-center justify-between">
+          <div className="col1 w-[25%]">
+            <Link to={"/"}>
+              <img src="/logo192.png" alt="logo" />
+            </Link>
+          </div>
+          <div className="col2 w-[45%]">
+            <Search />
+          </div>
+          <div className="col3 w-[30%]"></div>
+        </div>
+      </div>
     </header>
   );
 }
